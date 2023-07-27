@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.header{
+    margin:0px;
+background-image: url("/img/nature\ \(2\).jpg");
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+height: 100vh;
+}
+
+.container{
+    /*padding: -30px -10px;*/
+    margin: 0;
+    margin-left: -390px;
+}
+nav{
+    /*top: 0%;
+    position: sticky;*/
+    display: flex;
+    align-items: center;
+    justify-content:right;
+    background-color: black;
+    width: 70%;
+    height: 40px;
+    margin: 8px;
+    margin-top: 0px;
+    margin-left: 30%;
+    padding: 0;
+    background-image: url("/img/create.jpg");
+}
+.logo{
+    margin-right: 46%;
+    justify-content: space-between;
+    position: relative;
+    width: 5%;
+    cursor: pointer;
+}
+nav ul li{
+    display: inline-flex;
+    list-style: none;
+    margin: 13px;
+     margin-left: -4px;
+     padding: 1px;
+    background-color: aliceblue;
+    border-radius: 3px;
+    background-color:lightpink;
+}
+nav ul  li a{
+text-decoration: none;
+color: black;
+font-size: 12px;
+position: relative;
+padding: 3px;
+
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover::after{
+    width: 100%;
+    background-color:floralwhite;
+}
+.head{
+    margin-top: 0px;
+    font-size: 25px;
+    margin-left: 34%;
+    text-decoration: underline;
+    color:black;
+    width: fit-content;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #d8bfd8;
+
+}
+.header-text p{
+    width: 45%;
+    font-size: 15px;
+    margin-left: 71%;
+    margin-top: 53px;
+position: absolute;
+opacity: 2;
+    filter: opacity(100%);
+}
+#header{
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 115%;
+    width:30%;
+height: 70vh;
+     background-image: url("/img/rk1.jpg");
+     background-size: cover;
+     opacity: 0.8;
+     filter: opacity(200%);
+     border-radius: 50%;
+}
+@media screen and (max-width:600px){
+    #header{
+       
+        background-image: url("/img/rk5\(2\).jpg");
+        border-radius: 50%;
+        margin-top: 55px;
+        width: 36%;
+       height: 26vh;
+       margin-left: 445px;
+        position: absolute;
+    }
+.header-text{
+    
+    width: 100%;
+    margin-left: 180px;
+}
+.head{
+    width: 40%;
+    background-color: #d8bfd8;
+}
+.header-text p{
+    font-size: 20px;
+    width: 60%;
+    margin-left: 220px;
+    border: 3px;
+    border-style: double;
+    background-color: aliceblue;
+    opacity: 0.;
+}
+nav ul{
+    display: inline-flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 2px;
+    align-items: center;
+    font-size: 15px;
+}
+nav ul li a{
+    font-size: 11px;
+}
+}

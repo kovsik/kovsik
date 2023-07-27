@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    position: absolute;
+    background-color: black;
+}
+#about{
+    margin: 0px;
+    padding: 0px 0px;
+    background-image: url("/img/nature.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav{
+    /*top: 0%;
+    position: sticky;*/
+    display: flex;
+    align-items: center;
+    justify-content:right;
+    background-color: black;
+    width: 101.3%;
+    position: absolute;
+    height: 40px;
+    margin: 8px;
+    margin-top: 0px;
+    margin-left: -10px;
+    padding: 0;
+    background-image: url("/img/create.jpg");
+}
+.logo{
+    margin-right: 46%;
+    justify-content: space-between;
+    position: relative;
+    width: 5%;
+    cursor: pointer;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 13.5px;
+     margin-left: -3px;
+     padding: 1px;
+    background-color: aliceblue;
+    border-radius: 3px;
+    background-color:lightpink;
+}
+nav ul  li a{
+text-decoration: none;
+color: black;
+font-size: 12px;
+position: relative;
+padding: 3px;
+justify-content: space-between;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+    
+}
+nav ul li a:hover::after{
+    width: 100%;
+    background-color:floralwhite;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    margin-top: 40px;
+    width: 90%;
+    height: 90%;
+    border-radius: 1px;
+    
+}
+.about-col-1 img:hover{
+    transition: 1s;
+    transform:translateX(-100px);
+}
+.about-col-2{
+    flex-basis: 65%;
+}
+.sub-title{
+    margin: 0;
+    margin-top: 50px;
+    margin-right: -70px;
+    width: fit-content;
+    font-size: 30px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    background-color: whitesmoke;
+}
+.about-col-2 .para{
+    color: beige;
+    margin-left: 70px;
+    margin: 0px 10px;
+    border: 3px;
+    border-style: double;
+    border-color: black;
+    background-color:lightslategray;
+}
+.tab-titles p{
+    display: inline-flex;
+    margin: 30px 30px 40px;
+    border-radius: 3px;
+    border-style: none;
+    color: black;
+    background-color: blanchedalmond;
+}
+.tab-links{
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links:hover:after{
+    content: '';
+    width: 50%;
+    height: 3px;
+    background-color: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style-type: none;
+    margin: -20px 28px;
+}
+.tab-contents ul li span{
+    padding: 3px;
+    color:orangered;
+    background-color: black;
+    font-size: 15px;
+    text-decoration: underline;
+}
+.tab-contents li{
+    padding: 3px;
+    color:black;
+    background-color: wheat;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+@media screen and (max-width:600px) {
+    .about-col-1{
+        display: none;
+    }
+    .sub-title{
+        margin-left: 25%;
+    }
+    nav{
+        width: 103%;
+    }
+    nav ul li{
+        font-size: 15px;
+        padding: 1px;
+        align-items: center;
+        height: 15px;
+    }
+    nav ul{
+        display: inline-flex;
+        margin-right: 13px;
+    }
+    nav ul li a{
+        font-size: 13px;
+    }
+    .about-col-2 .para{
+    width: 130%;
+    margin-left: 20px;
+    align-items: center;
+    text-align:justify;
+    }
+    .tab-titles p{
+        display: block;
+        width: fit-content;
+        font-size: 20px;
+        margin: 50px;
+        margin-right: 15px;
+    }
+    .tab-contents ul li{
+    margin-left: 200px;
+    margin-bottom: 15px
+    }
+    .tab-contents ul li span{
+        margin-top: -180px;
+        display: inline-flex;
+        }
+     .tab-contents ul{
+        margin-top: -220px;
+        margin-bottom: 220px;
+     }   
+    .about-col-2 .para{
+        display: flex;
+        width: 80%;
+    }
+
+}

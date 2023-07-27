@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div id="about">
+        <div class="row">
+        <nav>
+            <img src="/img/logo2.jpeg" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUTME</a></li>
+                <li><a href="projects.html">PROJECT</a></li>
+                <li><a href="service.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    <div class="about-col-1">
+                <img src="/img/kov1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">ABOUT ME</h1><br><br>
+                <P class="para" style="line-height: 30px;">&nbsp;Hy everybody my name is kovsik.i have completed my college degree b.sc(IT) in karpagam university coimbatore. <br>
+                passed out during the period(2016-2019)</P>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">SKILLS</p>
+                    <p class="tab-links" onclick="opentab('experience')">EXPERIENCE</p>
+                    <p class="tab-links" onclick="opentab('education')">EDUCATION</p>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML/CSS/JAVA SCRIPT/BOOSTRAP</span><br>Web designing <b></b> <br><br></li>
+                        <li><span>ms-excel/tally</span><br>Office administrator <b></b> <br><br></li>
+                        <li><span>photoshop cs6</span><br>Editing <b></b> <br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023-current(MERN)</span><br>completed as a front end developer <br>
+                        <br></li>
+                        <li><span>2022-2023(TALLY)</span><br>basic knowledge worked on garments factory <br><br></li>
+                        <li><span>2023(PS6)</span><br>I know some basic knowledge about it</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2014(SSLC)</span><br>completed my 10TH studies at vikas vidhyalaya matric.hr.sec.school in tirupur 
+                            with (60%)<br><br></li>
+                        <li><span>2016(HSC)</span><br>completed my 12TH studies at vikas vidhyalaya matric.hr.sec.school in tiruppur 
+                            with (60%)<br><br></li>
+                        <li><span>2016-2019(UG DEGREE)</span><br>completed my ug degree at karpagam university in coimbatore
+                        with cgpa(6.9)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>

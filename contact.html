@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="contact">
+        <nav>
+            <img src="/img/logo2.jpeg" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUTME</a></li>
+                <li><a href="projects.html">PROJECT</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">contact me</h1>
+                    <p><i class="fa fa-paper-plane">&nbsp;</i>kovsikrk12@gmail.com</p>
+                    <p><i class="fa fa-phone-square-alt">&nbsp;</i>8610548447</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>&nbsp;
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>&nbsp;
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>&nbsp;
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>&nbsp;<br><br>
+                    </div>
+                    <button>
+                        <a href="https://drive.google.com/file/d/1WJEIgsQBqnr4iJBsZpnqF4zYcjvGRT_C/view?usp=sharing">Download cv</a>
+                    </button>
+                 </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="your name" required><br><br>
+                        <input type="email" name="email" placeholder="your email" required><br><br>
+                        <textarea name="message" id="" cols="30" rows="10" placeholder="your message"></textarea><br><br>
+                        <button type="submit">submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>copyright with kovsik.made with <i class="fas fa-heart"></i>for service as a good employee</p>
+        </div>
+    </div>
+</body>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbx6vyUlwh60DOLnHJLra_9YjdcuqgJxkb9xipE89zhPv5Si37GPirdH0SA0fTpJWLZQFg/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg=document.getElementById("msg")
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => {
+    msg.innerHTML="message sent successfully"
+    setTimeout(function(){
+        msg.innerHTML=""
+    },2000)
+    form.reset()
+    })
+  .catch(error => console.error('Error!', error.message))
+})
+</script>
+</html>
